@@ -6,7 +6,7 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
-// const swPath = path.join(__dirname, '..', 'next', 'service-worker.js');
+const swPath = path.join(__dirname,'sw.js');
 const manifestPath = path.join(__dirname, 'manifest.json');
 
 console.log("Dor ",path.join(__dirname, '/static'));
@@ -19,6 +19,11 @@ app.prepare()
     server.get('/manifest.json', (req, res) => {
       res.setHeader('Cache-Control', 'no-cache');
       res.sendFile(manifestPath);
+    });
+
+    server.get('/service-worker.js', (req, res) => {
+      res.setHeader('Cache-Control', 'no-cache');
+      res.sendFile(swPath);
     });
 
     server.use("/static", express.static(__dirname + "/static", {
@@ -47,12 +52,6 @@ app.prepare()
       const queryParams = { cat_name: req.params.cat_name, pr_name: req.params.pr_name }
       app.render(req, res, actualPage, queryParams)
     })
-
-
-    // server.get('/service-worker.js', (req, res) => {
-    //   res.setHeader('Cache-Control', 'no-cache');
-    //   res.sendFile(swPath);
-    // });
 
     server.get('*', (req, res) => {
       return handle(req, res)

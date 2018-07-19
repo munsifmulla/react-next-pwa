@@ -6,6 +6,7 @@
   "description": "A PWA built using Next.js and React",
   "display": "standalone",
   "start_url": ".",
+  "prefer_related_applications":true,
   "icons": [
     {
       "src": "static/lic-512.png",

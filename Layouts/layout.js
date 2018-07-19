@@ -31,6 +31,7 @@ export default props => (
       {/*Maps*/}
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxCUFRpqhv_ddrIDYagEAEPe-Q_bx6KZs&libraries=places"
               async defer></script>
+
     </footer>
   </div>
 )

@@ -1,11 +1,13 @@
 {
   "scripts": {
-    "dev": "next -p ${PORT:-8080}",
+    "dev": "node server.js",
     "build": "NODE_ENV=production next build",
-    "start": "NODE_ENV=production next start -p ${PORT:-8080}"
+    "start": "NODE_ENV=production next start -p ${PORT:-8001}"
   },
   "dependencies": {
     "bulma": "^0.6.2",
+    "express": "^4.16.3",
+    "forever": "^0.15.3",
     "next": "^4.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"

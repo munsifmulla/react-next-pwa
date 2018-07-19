@@ -1,8 +1,8 @@
 import Layout from '../Layouts/layout'
-import HomePage from '../components/homePage'
+import AboutusComponent from '../components/aboutusPage'
 
 export default () => (
   <Layout>
-    <HomePage/>
+    <AboutusComponent/>
   </Layout>
 )

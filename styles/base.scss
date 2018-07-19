@@ -1,0 +1,15 @@
+// In development mode changing anything here
+// doens't affect CSS recompilation
+// until something in `style.scss` is modified.
+*{
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: $background;
+}
+
+.container{
+  width: 1150px;
+  margin: 0 auto;
+}

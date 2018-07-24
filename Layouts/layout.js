@@ -12,13 +12,15 @@ export default props => (
       <link rel="icon" type="image/png" sizes="96x96" href="https://d2407na1z3fc0t.cloudfront.net/Banner/lic.png" />
       <link rel="icon" type="image/png" sizes="144x144" href="https://d2407na1z3fc0t.cloudfront.net/Banner/lic.png" />
       <link rel="manifest" href="/manifest.json" />
+      <link rel="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"/>
       <meta name="msapplication-TileImage" content="https://d2407na1z3fc0t.cloudfront.net/Banner/lic.png"/>
     </Head>
 
     <Nav/>
 
+    <div className="container">
       {props.children}
-
+    </div>
     <style jsx global>
       {baseStyles}
     </style>

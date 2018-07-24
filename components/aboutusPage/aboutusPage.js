@@ -4,7 +4,7 @@ class AboutusComponent extends Component{
   constructor(props){
     super(props);
     this.state={
-      title: this.props.title || "About Used page"
+      title: this.props.title || "About Us"
     }
   }
 

@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
     "build": "NODE_ENV=production next build",
-    "start": "NODE_ENV=production forever server.js"
+    "start": "sudo NODE_ENV=production pm2 start server.js --name 'react-next-pwa'",
+    "stop": "sudo pm2 stop react-next-pwa"
   },
   "dependencies": {
     "bulma": "^0.6.2",

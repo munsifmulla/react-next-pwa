@@ -4,7 +4,7 @@ import CatList from '../components/catLilst'
 
 const catList = withRouter((props) => (
   <Layout>
-    <CatList pr_name={props.router.query.cat_name}/>
+      <CatList pr_name={props.router.query.cat_name}/>
   </Layout>
 ))
 

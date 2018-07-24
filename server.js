@@ -58,7 +58,7 @@ app.prepare()
     })
 
 
-    server.listen(8001, (err) => {
+    server.listen(8080, (err) => {
       if (err) throw err
       console.log('> Ready on http://localhost:8001')
     })
